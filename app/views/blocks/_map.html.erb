@@ -132,7 +132,7 @@
       });
 
       window.stops = stops;
-      window.stopsInfo = _.groupBy(data, s => JSON.stringify(s.id));
+      window.stopsInfo = _.groupBy(data, s => s.id);
 
       $.ajax({
         url: 'https://developers.onemap.sg/publicapi/busexp/getbusStopsInfo?busStopNo=' + stops.join(","),
